@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Minh Khuat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="back-link">← Back</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="contact-section">
+                <h1 class="slide-in-left">Get In Touch</h1>
+
+                <div class="contact-content">
+                    <div class="contact-intro slide-in-right">
+                        <p>I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and development. Feel free to reach out through any of the channels below!</p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <div class="contact-method slide-in-up">
+                            <div class="method-icon">📧</div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                            <small>Best for: Business inquiries, collaboration opportunities</small>
+                        </div>
+
+                        <div class="contact-method slide-in-up-delay">
+                            <div class="method-icon">💼</div>
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+                            <small>Best for: Professional networking, career opportunities</small>
+                        </div>
+
+                        <div class="contact-method slide-in-up-delay-2">
+                            <div class="method-icon">🐙</div>
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+                            <small>Best for: Code collaboration, technical discussions</small>
+                        </div>
+
+                        <div class="contact-method slide-in-up-delay-3">
+                            <div class="method-icon">🐦</div>
+                            <h3>Twitter</h3>
+                            <p><a href="https://twitter.com/yourusername" target="_blank">@yourusername</a></p>
+                            <small>Best for: Quick questions, tech discussions</small>
+                        </div>
+
+                        <div class="contact-method slide-in-up-delay-4">
+                            <div class="method-icon">📷</div>
+                            <h3>Instagram</h3>
+                            <p><a href="https://instagram.com/yourusername" target="_blank">@yourusername</a></p>
+                            <small>Best for: Creative projects, behind-the-scenes</small>
+                        </div>
+
+                        <div class="contact-method slide-in-up-delay-5">
+                            <div class="method-icon">📘</div>
+                            <h3>Facebook</h3>
+                            <p><a href="https://facebook.com/yourusername" target="_blank">facebook.com/yourusername</a></p>
+                            <small>Best for: General inquiries, community updates</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-section slide-in-up-delay-6">
+                        <h3>Quick Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Minh Khuat | <a href="index.html">Home</a></p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Show success message
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.innerHTML = '<p class="success">Thank you for your message! I\'ll get back to you soon.</p>';
+            messageDiv.style.display = 'block';
+
+            // Reset form
+            this.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+
+            console.log('Form submitted:', data);
+        });
+    </script>
+</body>
+</html>

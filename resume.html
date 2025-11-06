@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Minh Khuat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="back-link">← Back</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="resume-section">
+                <h1 class="slide-in-left">Resume</h1>
+
+                <div class="resume-content">
+                    <div class="resume-download slide-in-right">
+                        <div class="download-card">
+                            <h3>Download My Resume</h3>
+                            <p>Get the complete version of my resume in PDF format</p>
+                            <div class="download-buttons">
+                                <a href="#" class="download-btn primary" onclick="downloadResume('pdf')">
+                                    <span class="icon">📄</span> Download PDF
+                                </a>
+                                <a href="#" class="download-btn secondary" onclick="downloadResume('doc')">
+                                    <span class="icon">📝</span> Download DOCX
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-preview slide-in-up">
+                        <div class="resume-card">
+                            <div class="resume-header">
+                                <h2>Minh Khuat</h2>
+                                <p class="title">Computer Science Student & Social Media Manager</p>
+                                <div class="contact-info">
+                                    <p>📧 your-email@example.com</p>
+                                    <p>📱 +1 (555) 123-4567</p>
+                                    <p>📍 Your City, Country</p>
+                                </div>
+                            </div>
+
+                            <div class="resume-section">
+                                <h3>Professional Summary</h3>
+                                <p>Computer Science student with expertise in software development and social media management. Passionate about clean code, efficient applications, and digital communication strategies. Experienced in Java, Python, JavaScript, and various database technologies.</p>
+                            </div>
+
+                            <div class="resume-section">
+                                <h3>Education</h3>
+                                <div class="education-item">
+                                    <h4>Bachelor of Science in Computer Science</h4>
+                                    <p class="institution">Your University Name</p>
+                                    <p class="date">Expected Graduation: 202X</p>
+                                    <ul class="achievements">
+                                        <li>GPA: 3.X/4.0</li>
+                                        <li>Relevant Coursework: Data Structures, Algorithms, Web Development, Database Systems</li>
+                                        <li>Member: Computer Science Club, Programming Competition Team</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="resume-section">
+                                <h3>Experience</h3>
+                                <div class="experience-item">
+                                    <h4>Social Media Manager</h4>
+                                    <p class="company">Company Name</p>
+                                    <p class="date">2023 - Present</p>
+                                    <ul>
+                                        <li>Managed social media accounts across multiple platforms (Twitter, Instagram, Facebook, LinkedIn)</li>
+                                        <li>Developed and executed content strategies resulting in X% increase in engagement</li>
+                                        <li>Analyzed metrics and created reports to optimize performance</li>
+                                        <li>Collaborated with development team to create custom social media tools</li>
+                                    </ul>
+                                </div>
+
+                                <div class="experience-item">
+                                    <h4>Software Development Intern</h4>
+                                    <p class="company">Tech Company</p>
+                                    <p class="date">Summer 2023</p>
+                                    <ul>
+                                        <li>Developed web applications using JavaScript, HTML, and CSS</li>
+                                        <li>Worked with MySQL and PostgreSQL databases</li>
+                                        <li>Participated in code reviews and agile development processes</li>
+                                        <li>Contributed to open-source projects</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="resume-section">
+                                <h3>Technical Skills</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-group">
+                                        <h4>Languages</h4>
+                                        <ul>
+                                            <li>Java (Advanced)</li>
+                                            <li>Python (Advanced)</li>
+                                            <li>JavaScript (Intermediate)</li>
+                                            <li>C++ (Intermediate)</li>
+                                            <li>HTML (Expert)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skill-group">
+                                        <h4>Databases</h4>
+                                        <ul>
+                                            <li>MySQL (Advanced)</li>
+                                            <li>PostgreSQL (Advanced)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="skill-group">
+                                        <h4>Other</h4>
+                                        <ul>
+                                            <li>Social Media Management</li>
+                                            <li>Vibe Coding</li>
+                                            <li>Git Version Control</li>
+                                            <li>Agile Methodologies</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="resume-section">
+                                <h3>Projects</h3>
+                                <div class="project-item">
+                                    <h4>Task Management Application</h4>
+                                    <p>Full-stack React application for productivity and task management with real-time collaboration features.</p>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Social Media Analytics Dashboard</h4>
+                                    <p>Python-based dashboard for tracking and analyzing social media performance across multiple platforms.</p>
+                                </div>
+                                <div class="project-item">
+                                    <h4>Mobile Task Manager</h4>
+                                    <p>Cross-platform mobile application with offline support and cloud synchronization capabilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Minh Khuat | <a href="index.html">Home</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function downloadResume(format) {
+            // Create a simple text resume for demo purposes
+            const resumeContent = `
+MINH KHUAT
+Computer Science Student & Social Media Manager
+
+CONTACT:
+Email: your-email@example.com
+Phone: +1 (555) 123-4567
+LinkedIn: linkedin.com/in/yourprofile
+GitHub: github.com/yourusername
+
+EDUCATION:
+Bachelor of Science in Computer Science
+Your University Name - Expected Graduation 202X
+GPA: 3.X/4.0
+
+EXPERIENCE:
+Social Media Manager | Company Name | 2023 - Present
+- Managed social media accounts across multiple platforms
+- Developed content strategies increasing engagement by X%
+- Analyzed metrics and created performance reports
+
+Software Development Intern | Tech Company | Summer 2023
+- Developed web applications using JavaScript, HTML, CSS
+- Worked with MySQL and PostgreSQL databases
+- Participated in agile development processes
+
+TECHNICAL SKILLS:
+Languages: Java, Python, JavaScript, C++, HTML
+Databases: MySQL, PostgreSQL
+Other: Social Media Management, Git, Agile Methodologies
+
+PROJECTS:
+- Task Management Application (React, Node.js)
+- Social Media Analytics Dashboard (Python)
+- Mobile Task Manager (JavaScript, HTML)
+
+SPECIAL SKILLS:
+Vibe Coding - Creative and intuitive approach to software development
+Social Media Management - Strategic content and community management
+            `;
+
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Minh_Khuat_Resume.${format}`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+
+            // Show success message
+            const message = document.createElement('div');
+            message.className = 'download-message';
+            message.textContent = `Resume downloaded as ${format.toUpperCase()}!`;
+            message.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #4CAF50;
+                color: white;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                animation: slideInRight 0.3s ease-out;
+            `;
+            document.body.appendChild(message);
+
+            setTimeout(() => {
+                document.body.removeChild(message);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
